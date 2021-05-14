@@ -1,0 +1,274 @@
+* {
+	padding: 0px;
+	margin:0px;
+}
+
+
+#logo img {
+	width:200px;
+	display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.menu {
+	display: block;
+	position: relative;
+	top: -25px;
+	left: 50px;
+	z-index: 1;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.menu a {
+	text-decoration: none;
+	color:red;
+	transition: color 0.3s ease;
+}
+
+.menu a:hover {
+	color:black;
+}
+
+.menu input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
+	-webkit-touch-callout: none;
+}
+
+.menu span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+	background: lightgrey;
+	border-radius: 3px;
+	z-index: 1;
+	transform-origin: 4px 0px;
+	transition: transorm 0.5s 
+				cubic-bezier(0.77, 0.2, 0.05, 1), 
+				background 0.5s 
+				cubic-bezier(0.77, 0.2, 0.05, 1), 
+				opacity 0.55s ease;
+}
+
+.menu span:first-child {
+	transform-origin: 0% 0%;
+}
+
+.menu span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+
+.menu input:checked ~ span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #1d3557;
+}
+
+.menu input:checked ~ span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu input:checked ~ span:nth-last-child(2) {
+	transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu-list {
+	position: absolute;
+	width: 300px;
+	height: 100vh;
+	margin: -100px 0 0 -50px;
+	padding: 100px;
+	padding-top: 125px;
+	background: #EDEDED;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.menu-list li {
+	padding: 10px 0;
+	font-size: 22px;
+}
+
+.menu input:checked ~ ul {
+	transform: none;
+}
+
+.producto img{
+	width: 120px;
+}
+a {
+	color: red !important;
+	font-size: 18px;
+}
+a:visited {
+	color: red !important;
+}
+a:hover {
+	color: black !important;
+	text-decoration: none !important;
+}
+
+/*CONTENT*/
+
+#container {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/*SIDEBAR*/
+#lateral {
+	width: 25%;
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+	min-height: 100vh;
+}
+#lateral h3 {
+	display: block;
+	color: #222;
+	width: 100%;
+	text-align: center;
+	padding: 2px 0;
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid black;
+}
+#lateral .block_aside {
+	display: block;
+	width: 90%;
+	margin: 5px auto;
+	padding: 10px;
+}
+
+#lateral a {
+	display: block;
+}
+/*FORMS*/
+input[type="text"], 
+input[type="password"],
+input[type="email"],
+select {
+	border: 1px solid black;
+	box-shadow: 0px 0px 2px red inset;
+	background:white;
+	padding: 2px;
+	color: gray;
+	transition: all 300ms;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="email"]:focus {
+	border: 1px solid red;
+	color: black;
+}
+
+/*  PRODUCTOS  */
+.producto {
+	width:20%;
+	border-right: 1px solid #ccc;
+	float:left;
+	margin: 20px 10px 0 10px;
+	text-align: center;
+}
+.producto h2 {
+	font-size: 18pt;
+}
+
+
+
+/*  PAGINA 404  */
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+main {
+	/*height: 100vh;*/
+	width: 75vw;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;
+	align-items: center;*/
+	font-family: 'Merriweather Sans', sans-serif;
+	text-align: center;
+}
+#errorText {
+	font-size: 22px;
+	margin: 14px 0;
+}
+	#errorLink {
+		font-size: 20px;
+		padding: 12px;
+		border: 1px solid;
+		color: #000;
+		background-color: transparent;
+		text-decoration: none;
+		transition: all 0.5s ease-in-out
+		&:hover, &:active
+			color: #fff;
+			background: #000;
+	}
+	#g6219 {
+		transform-origin: 85px 4px;
+		animation: an1 12s .5s infinite ease-out;
+	}
+@keyframes an1 {
+	0% {
+		transform: rotate(0);
+	}
+	5% {
+		transform: rotate(3deg);
+	}
+	15% {
+		transform: rotate(-2.5deg);
+	}
+	25% {
+		transform: rotate(2deg);
+	}
+	35% {
+		transform: rotate(-1.5deg);
+	}
+	45% {
+		transform: rotate(1deg);
+	}
+	55% {
+		transform: rotate(-1.5deg);
+	}
+	65% {
+		transform: rotate(2deg);
+	}
+	75% {
+		transform: rotate(-2deg);
+	}
+	85% {
+		transform: rotate(2.5deg);
+	}
+	95% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.alert-ok {
+	color:green;
+}
+.alert-wrong {
+	color:red;
+}
